@@ -1,3 +1,3 @@
 # csyhuang.github.io
 
-Under construction. Please visit my [official website](home.uchicago.edu/~csyhuang/).
+Under construction. Please visit my [official website](http://home.uchicago.edu/~csyhuang/).
