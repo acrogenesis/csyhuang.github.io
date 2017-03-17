@@ -1,6 +1,3 @@
----
-layout: default
----
 # Shao-Ying (Clare) Huang's Github directory
 
 Below are my Github repositories of both research-related projects and mini-data-science projects. To learn about my academic research, plesae visit my [official website](http://home.uchicago.edu/~csyhuang/).
