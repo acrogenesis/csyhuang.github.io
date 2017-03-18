@@ -2,10 +2,9 @@ To learn about my academic presentation and publications, plesae visit my [offic
 
 ### [Python Library: hn2016_falwa](http://github.com/csyhuang/hn2016_falwa)
 
-Python library from computing Finite-Amplitude Local Wave Activity from climate data.
-![GitHub Logo](hn2016_falwa_diagram.png)
+![hn2016_falwa_diagram](hn2016_falwa_diagram.png)
 
-The *hn2016_falwa* library include functions that can compute *FALWA* and related semi-lagrangian quantities such as *equivalent latitudes* and *eddy-free zonal reference states*. See documentation for details.
+The *hn2016_falwa* library computes Finite-Amplitude Rossby Local Wave Activity from gridded climate data of flexible resolutions.
 
 ### [Mini Data-Science Project: "Predicting Excitement at DonorsChoose.org"](http://github.com/csyhuang/DSaPP_RA_Project)
 
