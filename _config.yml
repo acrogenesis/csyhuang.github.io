@@ -1,5 +1,23 @@
-theme: jekyll-theme-minimal
-title: Shao-Ying (Clare) Huang
-description: I am a Ph.D candidate in the Department of the Geophysical Sciences in University of Chicago. This is my Github directory which includes all my project repositories with descriptions.
-show_downloads: false
-google_analytics:
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+#relative_permalinks: true
+
+# Setup
+title:               Shao Ying (Clare) Huang
+tagline:             'Atmospheric Scientist | Python library developer'
+description:         'PhD candidate (Atmospheric Sciences) in UChicago. Love coding, music and writing.'
+url:                 http://lanyon.getpoole.com
+baseurl:             ''
+paginate:            5
+
+# About/contact
+author:
+  name:              Shao Ying (Clare) Huang
+  url:               https://twitter.com/ClareSYHuang
+  email:             clare1068@gmail.com
+
+# Custom vars
+version:             1.0.0
+gems: [jekyll-paginate]
