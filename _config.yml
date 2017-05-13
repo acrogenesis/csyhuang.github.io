@@ -20,7 +20,9 @@ author:
 
 # Custom vars
 version:             1.0.0
-gems: [jekyll-paginate]
+gems: 
+  - jekyll-paginate
+  - jekyll-feed
 
 defaults:
   - scope:

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-13T16:10:13-05:00</updated><id>http://localhost:4000/</id><title type="html">Shao Ying (Clare) Huang</title><subtitle>PhD candidate (Atmospheric Sciences) in UChicago. Love coding, music and writing.</subtitle><author><name>Shao Ying (Clare) Huang</name><email>clare1068@gmail.com</email></author><entry><title type="html">Switching to Jekyll</title><link href="http://localhost:4000/2017/05/12/switching-to-jekyll/" rel="alternate" type="text/html" title="Switching to Jekyll" /><published>2017-05-12T00:00:00-05:00</published><updated>2017-05-12T00:00:00-05:00</updated><id>http://localhost:4000/2017/05/12/switching-to-jekyll</id><content type="html" xml:base="http://localhost:4000/2017/05/12/switching-to-jekyll/">&lt;p&gt;I’m switching from a traditional html webpage builder to Jekyll user! Hope to update more often!&lt;/p&gt;
+
+&lt;p&gt;I set up Jekyll in my Mac OS X with &lt;a href=&quot;http://brew.sh&quot;&gt;homebrew&lt;/a&gt;,  &lt;a href=&quot;https://github.com/rbenv/rbenv&quot;&gt;rbenv&lt;/a&gt; and &lt;a href=&quot;https://rubygems.org/&quot;&gt;RubyGems&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To see how to set jekyll up on Windows, refer to my &lt;a href=&quot;/2017/02/12/jekyll-on-windows/&quot;&gt;older post&lt;/a&gt;.&lt;/p&gt;</content><author><name>Shao Ying (Clare) Huang</name><email>clare1068@gmail.com</email></author><summary type="html">I’m switching from a traditional html webpage builder to Jekyll user! Hope to update more often! I set up Jekyll in my Mac OS X with homebrew, rbenv and RubyGems. To see how to set jekyll up on Windows, refer to my older post.</summary></entry><entry><title type="html">Installation of Jekyll on Windows 10</title><link href="http://localhost:4000/2017/02/12/jekyll-on-windows/" rel="alternate" type="text/html" title="Installation of Jekyll on Windows 10" /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/jekyll-on-windows</id><content type="html" xml:base="http://localhost:4000/2017/02/12/jekyll-on-windows/">&lt;p&gt;Below are the procedures I used to install Jekyll with problem solvers:&lt;/p&gt;
+
+&lt;p&gt;Main reference sites:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/docs/windows/&quot;&gt;Jekyll on Windows&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://davidburela.wordpress.com/2015/11/28/easily-install-jekyll-on-windows-with-3-command-prompt-entries-and-chocolatey/&quot;&gt;Easily install Jekyll on Windows with 3 command prompt entries and Chocolatey&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Procedures:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Open Powershell&lt;/li&gt;
+  &lt;li&gt;Run Powershell as administrator: [&lt;a href=&quot;http://stackoverflow.com/questions/7690994/powershell-running-a-command-as-administrator&quot;&gt;Reference&lt;/a&gt;]
+    &lt;blockquote&gt;
+      &lt;p&gt;Start-Process powershell -Verb runAs&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Change execution policy to enable installation of Chocolatey (a package manager): [&lt;a href=&quot;http://stackoverflow.com/questions/4037939/powershell-says-execution-of-scripts-is-disabled-on-this-system&quot;&gt;Reference&lt;/a&gt;]
+    &lt;blockquote&gt;
+      &lt;p&gt;Set-ExecutionPolicy RemoteSigned&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Installing Chocolatey: [&lt;a href=&quot;https://chocolatey.org/install&quot;&gt;Reference&lt;/a&gt;]
+    &lt;blockquote&gt;
+      &lt;p&gt;iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Update the certificate to install ruby: [&lt;a href=&quot;http://guides.rubygems.org/ssl-certificate-update/&quot;&gt;Reference&lt;/a&gt;]&lt;br /&gt;
+&lt;a href=&quot;http://guides.rubygems.org/ssl-certificate-update/&quot;&gt;http://guides.rubygems.org/ssl-certificate-update/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Install ruby:
+    &lt;blockquote&gt;
+      &lt;p&gt;choco install ruby -y&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Close the window and open a new command prompt with Administrator access (i.e. step 2)&lt;/li&gt;
+  &lt;li&gt;Install gem bundler
+    &lt;blockquote&gt;
+      &lt;p&gt;gem install bundler&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Install Jekyll
+    &lt;blockquote&gt;
+      &lt;p&gt;gem install jekyll&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Done :)&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Shao Ying (Clare) Huang</name><email>clare1068@gmail.com</email></author><summary type="html">Below are the procedures I used to install Jekyll with problem solvers: Main reference sites: Jekyll on Windows Easily install Jekyll on Windows with 3 command prompt entries and Chocolatey Procedures: Open Powershell Run Powershell as administrator: [Reference] Start-Process powershell -Verb runAs Change execution policy to enable installation of Chocolatey (a package manager): [Reference] Set-ExecutionPolicy RemoteSigned Installing Chocolatey: [Reference] iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex Update the certificate to install ruby: [Reference] http://guides.rubygems.org/ssl-certificate-update/ Install ruby: choco install ruby -y Close the window and open a new command prompt with Administrator access (i.e. step 2) Install gem bundler gem install bundler Install Jekyll gem install jekyll Done :)</summary></entry></feed>
