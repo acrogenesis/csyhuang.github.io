@@ -14,7 +14,7 @@ The diagnostic not only capture the life-cycle of finite-amplitude wave events (
 
 <img src="/assets/img/Flux_equation.png" alt="Wave activity flux equation" style="width: 250px;"/> 
 
-Please refer to Huang and Nakamura (2016) for details. The Python package hn2016_falwa for computing FALWA is now on Github. 
+Please refer to [Huang and Nakamura (2016)](http://journals.ametsoc.org/doi/abs/10.1175/JAS-D-15-0194.1) for details. The Python package [hn2016_falwa](https://github.com/csyhuang/hn2016_falwa) for computing FALWA is now on Github. 
 
 [to be continued]
 
