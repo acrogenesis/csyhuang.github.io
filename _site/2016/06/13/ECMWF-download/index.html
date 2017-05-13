@@ -11,7 +11,7 @@
 
   <title>
     
-      404: Page not found &middot; Shao Ying (Clare) Huang
+      Installing Python Library for downloading ERA-Interim Data &middot; Shao Ying (Clare) Huang
     
   </title>
 
@@ -118,9 +118,88 @@
       </div>
 
       <div class="container content">
-        <div class="page">
-  <h1 class="page-title">404: Page not found</h1>
-  <p class="lead">Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. <a href="/">Head back home</a> to try finding it again.</p>
+        <div class="post">
+  <h1 class="post-title">Installing Python Library for downloading ERA-Interim Data</h1>
+  <span class="post-date">13 Jun 2016</span>
+  <p>(1) Installing the package requires the python Setuptools. You can set it up locally with the command:</p>
+
+<blockquote>
+  <p>wget https://bootstrap.pypa.io/ez_setup.py -O - | python - –user</p>
+</blockquote>
+
+<p>(2) Download the Python library package and unzip it (You can do it in any directory)</p>
+<blockquote>
+  <p>wget https://software.ecmwf.int/wiki/download/attachments/56664858/ecmwf-api-client-python.tgz
+tar zxf ecmwf-api-client-python.tgz</p>
+</blockquote>
+
+<p>You shall see four items extracted:</p>
+<ul>
+  <li>example.py</li>
+  <li>ecmwfapi/<strong>init</strong>.py</li>
+  <li>ecmwfapi/api.py</li>
+  <li>setup.py</li>
+</ul>
+
+<p>(3) In the directory with these four items, install the package with:</p>
+<blockquote>
+  <p>python setup.py install –user</p>
+</blockquote>
+
+<p>(4) To use the sample script, you need an API key ( .ecmwfapirc ) placed in your home directory. You can retrieve that by logging in: https://api.ecmwf.int/v1/key/
+Create a file named “.ecmwfapirc” in your home directory and put in the content shown on the page:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"url"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.ecmwf.int/v1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"key"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"(...)"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(...)"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>(5) After doing that, in the directory with the sample script example.py, you can test the package by running it:</p>
+<blockquote>
+  <p>python example.py</p>
+</blockquote>
+
+<p>You should see it successfully retrieves a .grib file if the package has been set up properly.</p>
+
+<p>(6) To download python script for retrieving ERA-Interim netCDF files, there are sample script available here (look under “Same request NetCDF format”):
+[https://software.ecmwf.int/wiki/display/WEBAPI/Python+ERA-interim+examples]</p>
+
+<p>In fact, on the ECMWF Public Dataset web interface page you retrieve ERA-Interim data, after you select the subset of data, instead of pressing “Retrieve NetCDF”, there is another button named “View the MARS request”, and it will show how the python script for retrieving that dataset looks like.</p>
+
+<p>I learnt the above steps on these pages:</p>
+<ul>
+  <li><a href="https://software.ecmwf.int/wiki/display/WEBAPI/Access+ECMWF+Public+Datasets#AccessECMWFPublicDatasets-python">ECMWF python library</a></li>
+  <li><a href="https://pypi.python.org/pypi/setuptools">Python setuptool</a></li>
+</ul>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2017/05/12/switching-to-jekyll/">
+            Switching to Jekyll
+            <small>12 May 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2017/02/12/jekyll-on-windows/">
+            Installation of Jekyll on Windows 10
+            <small>12 Feb 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
 </div>
 
       </div>

@@ -5,8 +5,8 @@ permalink:           pretty
 #relative_permalinks: true
 
 # Setup
-title:               Shao Ying (Clare) Huang
-tagline:             'Atmospheric Scientist | Python library developer'
+title:               'Shao Ying (Clare) Huang'
+tagline:             'Geophysical Fluid Dynamicist | Data Scientist'
 description:         'PhD candidate (Atmospheric Sciences) in UChicago. Love coding, music and writing.'
 url:                 http://lanyon.getpoole.com
 baseurl:             ''

@@ -4,7 +4,7 @@
  <title>Shao Ying (Clare) Huang</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-05-13T16:10:13-05:00</updated>
+ <updated>2017-05-13T17:09:43-05:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Shao Ying (Clare) Huang</name>
@@ -75,6 +75,67 @@
   &lt;/li&gt;
   &lt;li&gt;Done :)&lt;/li&gt;
 &lt;/ol&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Installing Python Library for downloading ERA-Interim Data</title>
+   <link href="http://localhost:4000/2016/06/13/ECMWF-download/"/>
+   <updated>2016-06-13T00:00:00-05:00</updated>
+   <id>http://localhost:4000/2016/06/13/ECMWF-download</id>
+   <content type="html">&lt;p&gt;(1) Installing the package requires the python Setuptools. You can set it up locally with the command:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;wget https://bootstrap.pypa.io/ez_setup.py -O - | python - –user&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;(2) Download the Python library package and unzip it (You can do it in any directory)&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;wget https://software.ecmwf.int/wiki/download/attachments/56664858/ecmwf-api-client-python.tgz
+tar zxf ecmwf-api-client-python.tgz&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;You shall see four items extracted:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;example.py&lt;/li&gt;
+  &lt;li&gt;ecmwfapi/&lt;strong&gt;init&lt;/strong&gt;.py&lt;/li&gt;
+  &lt;li&gt;ecmwfapi/api.py&lt;/li&gt;
+  &lt;li&gt;setup.py&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(3) In the directory with these four items, install the package with:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;python setup.py install –user&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;(4) To use the sample script, you need an API key ( .ecmwfapirc ) placed in your home directory. You can retrieve that by logging in: https://api.ecmwf.int/v1/key/
+Create a file named “.ecmwfapirc” in your home directory and put in the content shown on the page:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;url&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.ecmwf.int/v1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;key&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;(...)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;email&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;(...)&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(5) After doing that, in the directory with the sample script example.py, you can test the package by running it:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;python example.py&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;You should see it successfully retrieves a .grib file if the package has been set up properly.&lt;/p&gt;
+
+&lt;p&gt;(6) To download python script for retrieving ERA-Interim netCDF files, there are sample script available here (look under “Same request NetCDF format”):
+[https://software.ecmwf.int/wiki/display/WEBAPI/Python+ERA-interim+examples]&lt;/p&gt;
+
+&lt;p&gt;In fact, on the ECMWF Public Dataset web interface page you retrieve ERA-Interim data, after you select the subset of data, instead of pressing “Retrieve NetCDF”, there is another button named “View the MARS request”, and it will show how the python script for retrieving that dataset looks like.&lt;/p&gt;
+
+&lt;p&gt;I learnt the above steps on these pages:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://software.ecmwf.int/wiki/display/WEBAPI/Access+ECMWF+Public+Datasets#AccessECMWFPublicDatasets-python&quot;&gt;ECMWF python library&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pypi.python.org/pypi/setuptools&quot;&gt;Python setuptool&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
  </entry>
  
