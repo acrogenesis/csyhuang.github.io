@@ -4,7 +4,7 @@
  <title>Shao Ying (Clare) Huang</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-05-13T17:14:44-05:00</updated>
+ <updated>2017-05-13T21:57:07-05:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Shao Ying (Clare) Huang</name>
@@ -98,7 +98,7 @@ tar zxf ecmwf-api-client-python.tgz&lt;/p&gt;
 &lt;p&gt;You shall see four items extracted:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;example.py&lt;/li&gt;
-  &lt;li&gt;ecmwfapi/&lt;strong&gt;init&lt;/strong&gt;.py&lt;/li&gt;
+  &lt;li&gt;ecmwfapi/__init__.py&lt;/li&gt;
   &lt;li&gt;ecmwfapi/api.py&lt;/li&gt;
   &lt;li&gt;setup.py&lt;/li&gt;
 &lt;/ul&gt;

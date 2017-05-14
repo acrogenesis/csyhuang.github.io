@@ -13,7 +13,7 @@ title: Installing Python Library for downloading ERA-Interim Data
 
 You shall see four items extracted:
 - example.py
-- ecmwfapi/__init__.py
+- ecmwfapi/\_\_init\_\_.py
 - ecmwfapi/api.py
 - setup.py
 

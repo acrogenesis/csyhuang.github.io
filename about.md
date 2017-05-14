@@ -10,6 +10,8 @@ My name is Clare, Shao Ying Huang. (FYI, "Shao Ying" is my legal first name, whi
 
 Prior to attending graduate school, I spent my first 21 years of life in Hong Kong. I obtained my B. Sc. degree in Physics from the Chinese University of Hong Kong with double-minor in Mathematics and German Languages.
 
+Read my [academic CV](http://home.uchicago.edu/~csyhuang/CSYHuang_CV.pdf).
+
 ## Contact Info
 - Email: csyhuang (at) uchicago (dot) edu
 - [Google Scholar](http://scholar.google.com/citations?user=o7pWZxkAAAAJ&hl=en)
