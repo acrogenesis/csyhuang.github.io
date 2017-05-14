@@ -3,9 +3,16 @@ layout: post
 title: Installing Python Library for downloading ERA-Interim Data
 ---
 
+### Update: The ECMWF api client is now available on pypi.  
+Installation (step 1-3) can be done by the command:
+> pip install ecmwf-api-client
+
+### Old steps (1-3)
+
+```
 (1) Installing the package requires the python Setuptools. You can set it up locally with the command:
 
-> wget https://bootstrap.pypa.io/ez_setup.py -O - \| python - --user
+> wget https://bootstrap.pypa.io/ez_setup.py -O - | python - --user
 
 (2) Download the Python library package and unzip it (You can do it in any directory)
 > wget https://software.ecmwf.int/wiki/download/attachments/56664858/ecmwf-api-client-python.tgz
@@ -13,12 +20,13 @@ title: Installing Python Library for downloading ERA-Interim Data
 
 You shall see four items extracted:
 - example.py
-- ecmwfapi/\_\_init\_\_.py
+- ecmwfapi/__init__.py
 - ecmwfapi/api.py
 - setup.py
 
 (3) In the directory with these four items, install the package with:
 > python setup.py install --user
+```
 
 (4) To use the sample script, you need an API key ( .ecmwfapirc ) placed in your home directory. You can retrieve that by logging in: https://api.ecmwf.int/v1/key/
 Create a file named ".ecmwfapirc" in your home directory and put in the content shown on the page:
