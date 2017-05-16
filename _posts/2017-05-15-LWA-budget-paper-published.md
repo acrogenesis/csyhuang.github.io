@@ -11,7 +11,7 @@ However, only the wave activity flux vector on the RHS has been used to diagnose
 
 Major results include:
 
-(1) Our estimation of transient wave activity (top panel) is consistent with previous work (bottom panel, assuming small-amplitude waves) and is better behaving.
+(1) Our estimation of transient wave activity (top panel) is consistent with [previous work](http://journals.ametsoc.org/doi/abs/10.1175/1520-0469%281986%29043%3C1657%3ATDPOTQ%3E2.0.CO%3B2) (bottom panel, assuming small-amplitude waves) and is better behaving.
 
 <img src="/assets/img/Revise_fig2.png" alt="Comparison with previous work" style="width: \textwidth;"/>  
 
