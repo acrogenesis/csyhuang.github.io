@@ -4,13 +4,23 @@
  <title>Shao Ying (Clare) Huang</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-05-13T22:53:32-05:00</updated>
+ <updated>2017-05-15T23:28:17-05:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Shao Ying (Clare) Huang</name>
    <email>clare1068@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Published a paper on wave activity budget</title>
+   <link href="http://localhost:4000/2017/05/15/LWA-budget-paper-published/"/>
+   <updated>2017-05-15T00:00:00-05:00</updated>
+   <id>http://localhost:4000/2017/05/15/LWA-budget-paper-published</id>
+   <content type="html">&lt;p&gt;I’ve published a &lt;a href=&quot;http://onlinelibrary.wiley.com/doi/10.1002/2017GL073760/abstract;jsessionid=2EEA61FFE129914E672C6F10497975B2.f02t02&quot;&gt;new paper&lt;/a&gt; on Geophysical Research Letters!&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Switching to Jekyll</title>
