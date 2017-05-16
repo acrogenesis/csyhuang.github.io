@@ -4,7 +4,7 @@
  <title>Shao Ying (Clare) Huang</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-05-16T00:55:31-05:00</updated>
+ <updated>2017-05-16T00:57:19-05:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Shao Ying (Clare) Huang</name>
@@ -21,7 +21,7 @@
 
 &lt;p&gt;Climate dynamicists have derived a conservation relation based on &lt;em&gt;small-amplitude wave assumption&lt;/em&gt; for wave activity (&lt;em&gt;A&lt;/em&gt;) that describes evolution of Rossby wave packets:&lt;br /&gt;
 &lt;img src=&quot;/assets/img/simple-wave-activity-equation.png&quot; alt=&quot;Wave activity flux equation&quot; style=&quot;width: 250px;&quot; /&gt;&lt;br /&gt;
-However, only the wave activity flux vector on the RHS has been used to diagnose realistic climate data. &lt;em&gt;A&lt;/em&gt; is ill-defined when wave amplitude is large (i.e. ‘of finite-amplitude’).  In &lt;a href=&quot;http://journals.ametsoc.org/doi/abs/10.1175/JAS-D-15-0194.1&quot;&gt;Huang &amp;amp; Nakamura (2016)&lt;/a&gt;, we introduced a new theory of wave activity applicable to large waves. We thus can obtain a well-defined &lt;em&gt;A&lt;/em&gt; even from real data. This is the &lt;strong&gt;first piece of work that compare LHS and RHS of the conservative part of equation above for reanalysis data&lt;/strong&gt;. This advance allows us to estimate the overall non-conservative contribution (natural/human-induced forcings) to the flow.&lt;/p&gt;
+However, only the wave activity flux vector on the RHS has been used to diagnose realistic climate data. &lt;em&gt;A&lt;/em&gt; is ill-defined when wave amplitude is large (i.e. ‘of finite-amplitude’).  In &lt;a href=&quot;http://journals.ametsoc.org/doi/abs/10.1175/JAS-D-15-0194.1&quot;&gt;Huang &amp;amp; Nakamura (2016)&lt;/a&gt;, we introduced a new theory of wave activity applicable to large waves. We thus can obtain a well-defined &lt;em&gt;A&lt;/em&gt; even from real data. This is the &lt;strong&gt;first piece of work that compare LHS and RHS of the conservative part of equation above for reanalysis data&lt;/strong&gt;. This advance allows us to estimate the overall non-conservative contribution (natural/human-induced forcings) to the observed flow.&lt;/p&gt;
 
 &lt;p&gt;Major results include:&lt;/p&gt;
 
