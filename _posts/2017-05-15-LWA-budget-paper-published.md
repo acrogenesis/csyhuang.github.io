@@ -7,7 +7,7 @@ I've published a [new paper](http://onlinelibrary.wiley.com/doi/10.1002/2017GL07
 
 Climate dynamicists have derived a conservation relation based on *small-amplitude wave assumption* for wave activity (*A*) that describes evolution of Rossby wave packets:  
 <img src="/assets/img/simple-wave-activity-equation.png" alt="Wave activity flux equation" style="width: 250px;"/>  
-However, only the wave activity flux vector on the RHS has been used to diagnose realistic climate data. *A* is ill-defined when wave amplitude is large (i.e. 'of finite-amplitude').  In [Huang & Nakamura (2016)](http://journals.ametsoc.org/doi/abs/10.1175/JAS-D-15-0194.1), we introduced a new theory of wave activity applicable to large waves. We thus can obtain a well-defined *A* even from real data. This is the **first piece of work that compare LHS and RHS of the equation above for reanalysis data**.
+However, only the wave activity flux vector on the RHS has been used to diagnose realistic climate data. *A* is ill-defined when wave amplitude is large (i.e. 'of finite-amplitude').  In [Huang & Nakamura (2016)](http://journals.ametsoc.org/doi/abs/10.1175/JAS-D-15-0194.1), we introduced a new theory of wave activity applicable to large waves. We thus can obtain a well-defined *A* even from real data. This is the **first piece of work that compare LHS and RHS of the conservative part of equation above for reanalysis data**. This advance allows us to estimate the overall non-conservative contribution (natural/human-induced forcings) to the flow.
 
 Major results include:
 
