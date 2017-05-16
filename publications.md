@@ -10,12 +10,7 @@ permalink: /publications/
 
 **Huang, C. S. Y.**, & Nakamura, N. **[Local wave activity budgets of the Pacific and Atlantic storm tracks in the northern winter.](http://onlinelibrary.wiley.com/doi/10.1002/2017GL073760/abstract;jsessionid=2EEA61FFE129914E672C6F10497975B2.f02t02)** [[Supporting Materials](http://onlinelibrary.wiley.com/store/10.1002/2017GL073760/asset/supinfo/2017GL073760-sup-0001-Text%2520SI-S01_AA.pdf?v=1&s=885968fc7fbd2de7010aff1a69123fd488429d7f)]
 
-- The LWA and flux convergence expressions introduced in Huang and Nakamura (2016) are applied to study storm track variability over North Pacific and North Atlantic in both seasonal and subseasonal time-scales.
-- Transient component of local wave activity (LWA) is estimated and shown to be consistent with that of Plumb (1986).
-- Seasonal mean budget of LWA reveals that the low-level meridional heat flux is the major source of LWA over both storm tracks.
-- On synoptic timescales the horizontal LWA flux convergence and diabatic heating play the leading roles in the LWA budget.
-- Convergence of the meridional eddy momentum flux describes the covariation of barotropic zonal wind and LWA over the Pacific but not the Atlantic.
-
+Read [this post](/2017/05/15/LWA-budget-paper-published/) for a brief summary of my results.
 
 Nakamura, N., & **Huang, C. S. Y.** (2017). **[Local wave activity and the onset of blocking along a potential vorticity front.](http://journals.ametsoc.org/doi/abs/10.1175/JAS-D-17-0029.1)** *Journal of the Atmospheric Sciences*, (2017).
 
