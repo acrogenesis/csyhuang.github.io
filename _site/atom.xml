@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Shao Ying (Clare) Huang</title>
- <link href="http://lanyon.getpoole.com/atom.xml" rel="self"/>
- <link href="http://lanyon.getpoole.com/"/>
- <updated>2017-05-16T11:01:14-05:00</updated>
- <id>http://lanyon.getpoole.com</id>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2017-05-19T14:47:19-05:00</updated>
+ <id>http://localhost:4000</id>
  <author>
    <name>Shao Ying (Clare) Huang</name>
    <email>clare1068@gmail.com</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Published a paper on Local Wave Activity Budget!</title>
-   <link href="http://lanyon.getpoole.com/2017/05/15/LWA-budget-paper-published/"/>
+   <link href="http://localhost:4000/2017/05/15/LWA-budget-paper-published/"/>
    <updated>2017-05-15T00:00:00-05:00</updated>
-   <id>http://lanyon.getpoole.com/2017/05/15/LWA-budget-paper-published</id>
+   <id>http://localhost:4000/2017/05/15/LWA-budget-paper-published</id>
    <content type="html">&lt;p&gt;I’ve published a &lt;a href=&quot;http://onlinelibrary.wiley.com/doi/10.1002/2017GL073760/abstract;jsessionid=2EEA61FFE129914E672C6F10497975B2.f02t02&quot;&gt;new paper&lt;/a&gt; on Geophysical Research Letters!&lt;/p&gt;
 
 &lt;p&gt;Climate dynamicists have derived a conservation relation based on &lt;em&gt;small-amplitude wave assumption&lt;/em&gt; for wave activity (&lt;em&gt;A&lt;/em&gt;) that describes evolution of Rossby wave packets:&lt;br /&gt;
@@ -44,9 +44,9 @@ However, only the wave activity flux vector on the RHS has been used to diagnose
  
  <entry>
    <title>Switching to Jekyll</title>
-   <link href="http://lanyon.getpoole.com/2017/05/12/switching-to-jekyll/"/>
+   <link href="http://localhost:4000/2017/05/12/switching-to-jekyll/"/>
    <updated>2017-05-12T00:00:00-05:00</updated>
-   <id>http://lanyon.getpoole.com/2017/05/12/switching-to-jekyll</id>
+   <id>http://localhost:4000/2017/05/12/switching-to-jekyll</id>
    <content type="html">&lt;p&gt;I’m switching from a traditional html webpage builder to Jekyll user! Hope to update more often!&lt;/p&gt;
 
 &lt;p&gt;I set up Jekyll in my Mac OS X with &lt;a href=&quot;http://brew.sh&quot;&gt;homebrew&lt;/a&gt;,  &lt;a href=&quot;https://github.com/rbenv/rbenv&quot;&gt;rbenv&lt;/a&gt; and &lt;a href=&quot;https://rubygems.org/&quot;&gt;RubyGems&lt;/a&gt;.&lt;/p&gt;
@@ -57,9 +57,9 @@ However, only the wave activity flux vector on the RHS has been used to diagnose
  
  <entry>
    <title>Installation of Jekyll on Windows 10</title>
-   <link href="http://lanyon.getpoole.com/2017/02/12/jekyll-on-windows/"/>
+   <link href="http://localhost:4000/2017/02/12/jekyll-on-windows/"/>
    <updated>2017-02-12T00:00:00-06:00</updated>
-   <id>http://lanyon.getpoole.com/2017/02/12/jekyll-on-windows</id>
+   <id>http://localhost:4000/2017/02/12/jekyll-on-windows</id>
    <content type="html">&lt;p&gt;Below are the procedures I used to install Jekyll with problem solvers:&lt;/p&gt;
 
 &lt;p&gt;Main reference sites:&lt;/p&gt;
@@ -110,9 +110,9 @@ However, only the wave activity flux vector on the RHS has been used to diagnose
  
  <entry>
    <title>Installing Python Library for downloading ERA-Interim Data</title>
-   <link href="http://lanyon.getpoole.com/2016/06/13/ECMWF-download/"/>
+   <link href="http://localhost:4000/2016/06/13/ECMWF-download/"/>
    <updated>2016-06-13T00:00:00-05:00</updated>
-   <id>http://lanyon.getpoole.com/2016/06/13/ECMWF-download</id>
+   <id>http://localhost:4000/2016/06/13/ECMWF-download</id>
    <content type="html">&lt;h3 id=&quot;update-the-ecmwf-api-client-is-now-available-on-pypi&quot;&gt;Update: The ECMWF api client is now available on pypi.&lt;/h3&gt;
 &lt;p&gt;Installation (step 1-3) can be done by the command:&lt;/p&gt;
 &lt;blockquote&gt;
