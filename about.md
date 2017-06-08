@@ -17,5 +17,5 @@ Read my <a href="http://home.uchicago.edu/~csyhuang/CSYHuang_CV.pdf" target="_bl
 - [Google Scholar](http://scholar.google.com/citations?user=o7pWZxkAAAAJ&hl=en)
 - [Github](http://github.com/csyhuang)
 - [ResearchGate](http://www.researchgate.net/profile/Clare_Huang)
-- [LinkedIn](http://www.linkedin.com/in/shao-ying-clare-huang-a8132792)
+- [LinkedIn](https://www.linkedin.com/in/shao-ying-clare-huang/)
 - [Twitter](http://twitter.com/ClareSYHuang)
