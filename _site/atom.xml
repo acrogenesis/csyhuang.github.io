@@ -4,13 +4,30 @@
  <title>Shao Ying (Clare) Huang</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-06-08T01:33:42-04:00</updated>
+ <updated>2017-06-10T23:49:33-04:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Shao Ying (Clare) Huang</name>
    <email>clare1068@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Python packages for Sentiment Analysis</title>
+   <link href="http://localhost:4000/2017/06/10/Python-packages-for-Sentiment-Analysis/"/>
+   <updated>2017-06-10T00:00:00-04:00</updated>
+   <id>http://localhost:4000/2017/06/10/Python-packages-for-Sentiment-Analysis</id>
+   <content type="html">&lt;p&gt;On top of utilities in &lt;em&gt;nltk.sentiment&lt;/em&gt;, there are also some packages for training and combining classifiers:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/japerk/nltk-trainer&quot;&gt;NLTK-trainer&lt;/a&gt; by &lt;a href=&quot;https://www.linkedin.com/in/jacobperkins&quot;&gt;Jacob Perkins&lt;/a&gt;, accompanied by the &lt;a href=&quot;https://github.com/japerk/nltk3-cookbook&quot;&gt;NLTK-cookbook&lt;/a&gt; he wrote.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/clips/pattern&quot;&gt;Pattern.en&lt;/a&gt; developed by the &lt;a href=&quot;http://www.clips.ua.ac.be/&quot;&gt;Computational Linguistics Research Group&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Data sets for training a sentiment classifier: &lt;a href=&quot;https://www.cs.cornell.edu/people/pabo/movie-review-data/&quot;&gt;Movie Review Data&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(More to be updated)&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Published a paper on Local Wave Activity Budget!</title>
