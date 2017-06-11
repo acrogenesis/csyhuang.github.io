@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Python packages for Sentiment Analysis &middot; Shao Ying (Clare) Huang
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>PhD candidate (Atmospheric Sciences) in UChicago. Love coding, music and writing.</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About</a>
+        
+      
+    
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/presentations/">Conference Presentations</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/publications/">Publications</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/research/">Academic Research</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/tools/">Handy Tools</a>
+        
+      
+    
+
+<!--    <a class="sidebar-nav-item" href="/archive/v1.0.0.zip">Download</a> -->
+    <a class="sidebar-nav-item" href="http://github.com/csyhuang/"  target="_blank">Github</a>
+<!--    <span class="sidebar-nav-item">Currently v1.0.0</span> --->
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2017 Shao Ying (Clare) Huang. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Shao Ying (Clare) Huang</a>
+            <small>Geophysical Fluid Dynamicist | Data Scientist</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">Python packages for Sentiment Analysis</h1>
+  <span class="post-date">10 Jun 2017</span>
+  <p>On top of utilities in <em>nltk.sentiment</em>, there are also some packages for training and combining classifiers:</p>
+
+<ul>
+  <li><a href="https://github.com/japerk/nltk-trainer">NLTK-trainer</a> by <a href="https://www.linkedin.com/in/jacobperkins">Jacob Perkins</a>, accompanied by the <a href="https://github.com/japerk/nltk3-cookbook">NLTK-cookbook</a> he wrote.</li>
+  <li><a href="https://github.com/clips/pattern">Pattern.en</a> developed by the <a href="http://www.clips.ua.ac.be/">Computational Linguistics Research Group</a></li>
+  <li>Data sets for training a sentiment classifier: <a href="https://www.cs.cornell.edu/people/pabo/movie-review-data/">Movie Review Data</a></li>
+</ul>
+
+<p>(More to be updated)</p>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2017/05/15/LWA-budget-paper-published/">
+            Published a paper on Local Wave Activity Budget!
+            <small>15 May 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2017/05/12/switching-to-jekyll/">
+            Switching to Jekyll
+            <small>12 May 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2017/02/12/jekyll-on-windows/">
+            Installation of Jekyll on Windows 10
+            <small>12 Feb 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+<div>
+<a href="javascript:history.back()"> << Previous Page</a>
+</div>
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>
