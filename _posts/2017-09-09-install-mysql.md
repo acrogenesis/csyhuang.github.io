@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Setting up MySQL / access with python on Mac OS
+tags: ['setup']
 ---
 
 Today I wanted to setup an automated kickstarter scraper on [Python Anywhere](http://pythonanywhere.com) but realized that 

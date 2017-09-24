@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Python packages for Sentiment Analysis
+tags: ['ds']
 ---
 
 On top of utilities in *nltk.sentiment*, there are also some packages for training and combining classifiers:

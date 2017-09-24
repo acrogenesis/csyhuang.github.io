@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Software Engineering Project Note-taking
+tags: ['se']
 ---
 
 Learnt a lot from peers today! :D Here are quick notes on packages they have used for their software engineering project:

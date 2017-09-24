@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Installation of Jekyll on Windows 10
+tags: ['setup']
 ---
 
 Below are the procedures I used to install Jekyll with problem solvers:

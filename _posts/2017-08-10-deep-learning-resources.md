@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Free Online Deep Learning Resources
+tags: ['ds']
 ---
 
 These are resources related to deep learning from conversation with friends:

@@ -1,14 +1,39 @@
 ---
 layout: default
-title: Home
+title: Blog
 ---
+<div class="row">
+  <div class="col-sm-8">
+  <p class="influidcontainer">I have just completed my Ph.D degree in Geophysical Sciences in the University of Chicago.
+  My academic research work focuses on developing an atmospheric Rossby wave diagnostic theory that quantfies severity of extreme weather events. 
+  Check out my python library to implement this diagnosis on climate data!
+  </p>
+  <p class="influidcontainer">
+  I also participated in the Insight Data Science Fellowship Program in 2017 summer as a Health Data Fellow to learn about data science and health industry.
+  You can find my mini-data-projects and technical learning journals here.
+  </p>
 
-<div class="posts">
-  <div class="post">
+<!-- 
+  Welcome to my personal homepage! 
+  Please use the <b>left-side menu</b> to navigate to pages related to my academic work. 
+  This index page is maintained in a blog-like manner that I'll constantly put in things I've learnt, 
+  and updated content of this website. Welcome to my personal homepage! 
+  Please use the <b>left-side menu</b> to navigate to pages related to my academic work. This index page is maintained in a blog-like manner that I'll constantly put in things I've learnt, and updated content of this website. Welcome to my personal homepage! Please use the <b>left-side menu</b> to navigate to pages related to my academic work. This index page is maintained in a blog-like manner that I'll constantly put in things I've learnt, and updated content of this website. 
+ -->
+  </div>
+  
+  <div class="col-sm-4"><img src="{{ site.baseurl }}/assets/img/profile_pic_square.jpg"></div>
+<!--   <div class="col-sm-6"><img src="http://home.uchicago.edu/~csyhuang/images/ProfilePic_larger.jpg"></div> -->
+</div>
+
+
+<!-- 
 Welcome to my personal homepage! Please use the <b>left-side menu</b> to navigate to pages related to my academic work. This index page is maintained in a blog-like manner that I'll constantly put in things I've learnt, and updated content of this website.
   </div>
 </div>
-
+ -->
+<div class="clear"></div>
+<hr>
 
 <div class="posts">
   {% for post in paginator.posts %}
@@ -50,3 +75,4 @@ Welcome to my personal homepage! Please use the <b>left-side menu</b> to navigat
 </a> <br/>
 </p>
 </div>
+  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/trial.css">
