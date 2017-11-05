@@ -173,143 +173,101 @@ Welcome to my personal homepage! Please use the <b>left-side menu</b> to navigat
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2017/06/11/setup-ubuntu-aws/">
-        Setting up ubuntu on AWS
+      <a href="/2016/06/13/ECMWF-download/">
+        Installing Python Library for downloading ERA-Interim Data
       </a>
     </h1>
 
-    <span class="post-date">11 Jun 2017</span>
+    <span class="post-date">13 Jun 2016</span>
 
-    <p><a href="(https://stackoverflow.com/questions/32389599/anaconda-importerror-libsm-so-6-cannot-open-shared-object-file-no-such-file-o)">Solution</a> for the error <em>libSM.so.6: cannot open shared object file</em>.</p>
+    <h3 id="update-the-ecmwf-api-client-is-now-available-on-pypi">Update: The ECMWF api client is now available on pypi.</h3>
+<p>Installation (step 1-3) can be done by the command:</p>
+<blockquote>
+  <p>pip install ecmwf-api-client</p>
+</blockquote>
 
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2017/06/10/Python-packages-for-Sentiment-Analysis/">
-        Python packages for Sentiment Analysis
-      </a>
-    </h1>
+<h3 id="old-steps-1-3">Old steps (1-3)</h3>
 
-    <span class="post-date">10 Jun 2017</span>
+<div class="highlighter-rouge"><pre class="highlight"><code>(1) Installing the package requires the python Setuptools. You can set it up locally with the command:
 
-    <p>On top of utilities in <em>nltk.sentiment</em>, there are also some packages for training and combining classifiers:</p>
+&gt; wget https://bootstrap.pypa.io/ez_setup.py -O - | python - --user
 
+(2) Download the Python library package and unzip it (You can do it in any directory)
+&gt; wget https://software.ecmwf.int/wiki/download/attachments/56664858/ecmwf-api-client-python.tgz
+&gt; tar zxf ecmwf-api-client-python.tgz
+
+You shall see four items extracted:
+- example.py
+- ecmwfapi/__init__.py
+- ecmwfapi/api.py
+- setup.py
+
+(3) In the directory with these four items, install the package with:
+&gt; python setup.py install --user
+</code></pre>
+</div>
+
+<p>(4) To use the sample script, you need an API key ( .ecmwfapirc ) placed in your home directory. You can retrieve that by logging in: https://api.ecmwf.int/v1/key/
+Create a file named “.ecmwfapirc” in your home directory and put in the content shown on the page:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"url"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.ecmwf.int/v1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"key"</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">"(...)"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(...)"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>(5) After doing that, in the directory with the sample script example.py, you can test the package by running it:</p>
+<blockquote>
+  <p>python example.py</p>
+</blockquote>
+
+<p>You should see it successfully retrieves a .grib file if the package has been set up properly.</p>
+
+<p>(6) To download python script for retrieving ERA-Interim netCDF files, there are sample script available here (look under “Same request NetCDF format”):
+[https://software.ecmwf.int/wiki/display/WEBAPI/Python+ERA-interim+examples]</p>
+
+<p>In fact, on the ECMWF Public Dataset web interface page you retrieve ERA-Interim data, after you select the subset of data, instead of pressing “Retrieve NetCDF”, there is another button named “View the MARS request”, and it will show how the python script for retrieving that dataset looks like.</p>
+
+<p>I learnt the above steps on these pages:</p>
 <ul>
-  <li><a href="https://github.com/japerk/nltk-trainer">NLTK-trainer</a> by <a href="https://www.linkedin.com/in/jacobperkins">Jacob Perkins</a>, accompanied by the <a href="https://github.com/japerk/nltk3-cookbook">NLTK-cookbook</a> he wrote.</li>
-  <li><a href="https://github.com/clips/pattern">Pattern.en</a> developed by the <a href="http://www.clips.ua.ac.be/">Computational Linguistics Research Group</a></li>
-  <li>Data sets for training a sentiment classifier: <a href="https://www.cs.cornell.edu/people/pabo/movie-review-data/">Movie Review Data</a></li>
+  <li><a href="https://software.ecmwf.int/wiki/display/WEBAPI/Access+ECMWF+Public+Datasets#AccessECMWFPublicDatasets-python">ECMWF python library</a></li>
+  <li><a href="https://pypi.python.org/pypi/setuptools">Python setuptool</a></li>
 </ul>
 
-<p>(More to be updated)</p>
-
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2017/05/15/LWA-budget-paper-published/">
-        Published a paper on Local Wave Activity Budget!
+      <a href="/1917/10/01/udemy-web-development-course-notes/">
+        Udemy's course on Web Development
       </a>
     </h1>
 
-    <span class="post-date">15 May 2017</span>
+    <span class="post-date">01 Oct 1917</span>
 
-    <p>I’ve published a <a href="http://onlinelibrary.wiley.com/doi/10.1002/2017GL073760/abstract;jsessionid=2EEA61FFE129914E672C6F10497975B2.f02t02">new paper</a> on Geophysical Research Letters!</p>
+    <p>There are a bunch of <a href="https://www.offers.com/udemy/">free courses</a> on Udemy. Here are some notes from the lectures. I’ll keep updating it.</p>
 
-<p>Climate dynamicists have derived a conservation relation based on <em>small-amplitude wave assumption</em> for wave activity (<em>A</em>) that describes evolution of Rossby wave packets:<br />
-<img src="/assets/img/simple-wave-activity-equation.png" alt="Wave activity flux equation" style="width: 250px;" /><br />
-However, only the wave activity flux vector on the RHS has been used to diagnose realistic climate data. <em>A</em> is ill-defined when wave amplitude is large (i.e. ‘of finite-amplitude’).  In <a href="http://journals.ametsoc.org/doi/abs/10.1175/JAS-D-15-0194.1">Huang &amp; Nakamura (2016)</a>, we introduced a new theory of wave activity applicable to large waves. We thus can obtain a well-defined <em>A</em> even from real data. This is the <strong>first piece of work that compare LHS and RHS of the conservative part of equation above for reanalysis data</strong>. This advance allows us to estimate the overall non-conservative contribution (natural/human-induced forcings) to the observed flow.</p>
+<h2 id="free-code-editors-both-downloadable-and-online">Free code editors (both downloadable and online)</h2>
 
-<p>Major results include:</p>
+<h3 id="script-editor">Script editor</h3>
+<p><a href="https://notepad-plus-plus.org">Notepad++</a>
+<a href="http://lighttable.com/">Light table</a>
+<a href="http://brackets.io">Brackets</a>
+<a href="http://atom.io">Atom</a>
+<a href="http://www.sublimetext.com/">Sublime</a></p>
 
-<p>(1) Our estimation of transient wave activity (top panel) is consistent with <a href="http://journals.ametsoc.org/doi/abs/10.1175/1520-0469%281986%29043%3C1657%3ATDPOTQ%3E2.0.CO%3B2">previous work</a> (bottom panel, assuming small-amplitude waves) and is better behaving.</p>
+<h3 id="html-editor">HTML editor</h3>
+<p><a href="http://www.adobe.com/products/dreamweaver.html">Dreamweaver</a>
+<a href="https://www.activestate.com/komodo-ide">Komodo</a></p>
 
-<p><img src="/assets/img/Revise_fig2.png" alt="Comparison with previous work" style="width: \textwidth;" /></p>
-
-<p>(2) We can break down the local wave activity budget at seasonal time-scale.</p>
-<p align="center">
-<img src="/assets/img/Revise_fig3.png" alt="Wave activity flux equation" style="width: \textwidth;" />  
-</p>
-
-<p>(3) We can also break down the budget in synoptic time-scale with the use of co-spectral analysis.</p>
-<p align="center">
-<img src="/assets/img/Revise_fig4.png" alt="Wave activity flux equation" style="width: \textwidth;" />
-</p>
-
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2017/05/12/switching-to-jekyll/">
-        Switching to Jekyll
-      </a>
-    </h1>
-
-    <span class="post-date">12 May 2017</span>
-
-    <p>I’m switching from a traditional html webpage builder to Jekyll user! Hope to update more often!</p>
-
-<p>I set up Jekyll in my Mac OS X with <a href="http://brew.sh">homebrew</a>,  <a href="https://github.com/rbenv/rbenv">rbenv</a> and <a href="https://rubygems.org/">RubyGems</a>.</p>
-
-<p>To see how to set jekyll up on Windows, refer to my <a href="/2017/02/12/jekyll-on-windows/">older post</a>.</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2017/02/12/jekyll-on-windows/">
-        Installation of Jekyll on Windows 10
-      </a>
-    </h1>
-
-    <span class="post-date">12 Feb 2017</span>
-
-    <p>Below are the procedures I used to install Jekyll with problem solvers:</p>
-
-<p>Main reference sites:</p>
-
-<p><a href="https://jekyllrb.com/docs/windows/">Jekyll on Windows</a><br />
-<a href="https://davidburela.wordpress.com/2015/11/28/easily-install-jekyll-on-windows-with-3-command-prompt-entries-and-chocolatey/">Easily install Jekyll on Windows with 3 command prompt entries and Chocolatey</a></p>
-
-<p>Procedures:</p>
-<ol>
-  <li>Open Powershell</li>
-  <li>Run Powershell as administrator: [<a href="http://stackoverflow.com/questions/7690994/powershell-running-a-command-as-administrator">Reference</a>]
-    <blockquote>
-      <p>Start-Process powershell -Verb runAs</p>
-    </blockquote>
-  </li>
-  <li>Change execution policy to enable installation of Chocolatey (a package manager): [<a href="http://stackoverflow.com/questions/4037939/powershell-says-execution-of-scripts-is-disabled-on-this-system">Reference</a>]
-    <blockquote>
-      <p>Set-ExecutionPolicy RemoteSigned</p>
-    </blockquote>
-  </li>
-  <li>Installing Chocolatey: [<a href="https://chocolatey.org/install">Reference</a>]
-    <blockquote>
-      <p>iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex</p>
-    </blockquote>
-  </li>
-  <li>Update the certificate to install ruby: [<a href="http://guides.rubygems.org/ssl-certificate-update/">Reference</a>]<br />
-<a href="http://guides.rubygems.org/ssl-certificate-update/">http://guides.rubygems.org/ssl-certificate-update/</a></li>
-  <li>Install ruby:
-    <blockquote>
-      <p>choco install ruby -y</p>
-    </blockquote>
-  </li>
-  <li>Close the window and open a new command prompt with Administrator access (i.e. step 2)</li>
-  <li>Install gem bundler
-    <blockquote>
-      <p>gem install bundler</p>
-    </blockquote>
-  </li>
-  <li>Install Jekyll
-    <blockquote>
-      <p>gem install jekyll</p>
-    </blockquote>
-  </li>
-  <li>Done :)</li>
-</ol>
+<h3 id="online-editor">Online editor</h3>
+<p><a href="http://codepen.io">Codepen.io</a>
+<a href="http://jsfiddle.net/">Javascript - jsfiddle.net</a>
+<a href="http://dabblet.com">CSS editor - dabblet.com</a>
+<a href="http://liveweave.com">Web editor - liveweave.com. Really good functionality.</a>
+<a href="http://macaw.co/">Web design tool - Macaw</a></p>
 
   </div>
   
@@ -317,11 +275,11 @@ However, only the wave activity flux vector on the RHS has been used to diagnose
 
 <div class="pagination">
   
-    <a class="pagination-item older" href="/page3">Older</a>
+    <span class="pagination-item older">Older</span>
   
   
     
-      <a class="pagination-item newer" href="/">Newer</a>
+      <a class="pagination-item newer" href="/page2">Newer</a>
     
   
 </div>

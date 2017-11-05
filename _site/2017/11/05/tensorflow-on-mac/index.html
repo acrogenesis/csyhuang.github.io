@@ -11,7 +11,7 @@
 
   <title>
     
-      Technical Notes &middot; Shao Ying (Clare) Huang
+      Compiling tensorflow on Mac with SSE, AVX, FMA etc. &middot; Shao Ying (Clare) Huang
     
   </title>
 
@@ -95,7 +95,7 @@
     
       
         
-          <a class="sidebar-nav-item active" href="/technical/">Technical Notes</a>
+          <a class="sidebar-nav-item" href="/technical/">Technical Notes</a>
         
       
     
@@ -132,54 +132,75 @@
       </div>
 
       <div class="container content">
-        <div class="page">
-  <h1 class="page-title">Technical Notes</h1>
-  <p>It’s fun to write about what I have learnt and share solutions to technical problems I have solved.</p>
+        <div class="post">
+  <h1 class="post-title">Compiling tensorflow on Mac with SSE, AVX, FMA etc.</h1>
+  <span class="post-date">05 Nov 2017</span>
+  <p>(Ideally, I shall run tensorflow somewhere else rather than on my MacBook.)</p>
 
-<h2 id="data-science">Data Science</h2>
+<p>When I install keras with Anaconda on my Mac OS X, with tensorflow as the backend, the following warning comes up when
+ running the sample script:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+</code></pre>
+</div>
 
-<ul>
-  <li>
-    <p><a href="/2017/08/10/deep-learning-resources/">Free Online Deep Learning Resources</a></p>
-  </li>
-  <li>
-    <p><a href="/2017/06/10/Python-packages-for-Sentiment-Analysis/">Python packages for Sentiment Analysis</a></p>
-  </li>
-</ul>
-
-<h2 id="software-engineering">Software Engineering</h2>
-
-<ul>
-  <li><a href="/2017/08/18/software-engineering-project-note-taking/">Software Engineering Project Note-taking</a></li>
-</ul>
-
-<h2 id="system--package-set-up">System / Package set-up</h2>
-
-<ul>
-  <li>
-    <p><a href="/2017/11/05/tensorflow-on-mac/">Compiling tensorflow on Mac with SSE, AVX, FMA etc.</a></p>
-  </li>
-  <li>
-    <p><a href="/2017/09/09/install-mysql/">Setting up MySQL / access with python on Mac OS</a></p>
-  </li>
-  <li>
-    <p><a href="/2017/06/11/setup-ubuntu-aws/">Setting up ubuntu on AWS</a></p>
-  </li>
-  <li>
-    <p><a href="/2017/02/12/jekyll-on-windows/">Installation of Jekyll on Windows 10</a></p>
-  </li>
-</ul>
-
-<h2 id="notes-taken-from-lectures--online-courses">Notes taken from lectures / online courses:</h2>
-
-<ul>
-  <li><a href="/1917/10/01/udemy-web-development-course-notes/">Udemy’s course on Web Development</a></li>
-</ul>
-
+<p>To use those instructions (<em>SSE4.1 SSE4.2 AVX AVX2 FMA</em>), tensorflow has to be compiled from source. The instructions are available <a href="https://www.tensorflow.org/install/install_sources">here</a>. 
+Using the following command to build the source:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>bazel build -c opt --copt<span class="o">=</span>-march<span class="o">=</span>native --copt<span class="o">=</span>-mfpmath<span class="o">=</span>both --config<span class="o">=</span>cuda -k //tensorflow/tools/pip_package:build_pip_package
+</code></pre>
+</div>
+<p>I got the following error:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>Problem with java installation: couldn't find/access rt.jar in /Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home
+</code></pre>
+</div>
+<p>It happens that <em>rt.jar</em> is not present in Java 9. To solve it, install a version of Java 8:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>brew cask install caskroom/versions/java8
+</code></pre>
+</div>
+<p>and then specify the path of Java 8:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">export </span><span class="nv">JAVA_HOME</span><span class="o">=</span><span class="k">$(</span>/usr/libexec/java_home -v 1.8.0_152<span class="k">)</span>
+</code></pre>
+</div>
+<p>Afterwards, I try to build tensorflow from source again, and it successfully includes the instructions above.</p>
 
 </div>
 
-  <link rel="stylesheet" href="/public/css/trial.css">
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2017/09/09/install-mysql/">
+            Setting up MySQL / access with python on Mac OS
+            <small>09 Sep 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2017/08/18/software-engineering-project-note-taking/">
+            Software Engineering Project Note-taking
+            <small>18 Aug 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2017/08/10/deep-learning-resources/">
+            Free Online Deep Learning Resources
+            <small>10 Aug 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+<div>
+<a href="javascript:history.back()"> << Previous Page</a>
+</div>
       </div>
     </div>
 

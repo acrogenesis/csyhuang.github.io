@@ -30,3 +30,5 @@ defaults:
     values:
       image: true
 
+# Exclude directories
+exclude: ["Raw_not_uploaded"]

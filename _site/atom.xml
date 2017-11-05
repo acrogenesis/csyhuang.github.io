@@ -4,13 +4,47 @@
  <title>Shao Ying (Clare) Huang</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-09-24T18:36:48-05:00</updated>
+ <updated>2017-11-05T14:56:56-06:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Shao Ying (Clare) Huang</name>
    <email>clare1068@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Compiling tensorflow on Mac with SSE, AVX, FMA etc.</title>
+   <link href="http://localhost:4000/2017/11/05/tensorflow-on-mac/"/>
+   <updated>2017-11-05T00:00:00-05:00</updated>
+   <id>http://localhost:4000/2017/11/05/tensorflow-on-mac</id>
+   <content type="html">&lt;p&gt;(Ideally, I shall run tensorflow somewhere else rather than on my MacBook.)&lt;/p&gt;
+
+&lt;p&gt;When I install keras with Anaconda on my Mac OS X, with tensorflow as the backend, the following warning comes up when
+ running the sample script:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To use those instructions (&lt;em&gt;SSE4.1 SSE4.2 AVX AVX2 FMA&lt;/em&gt;), tensorflow has to be compiled from source. The instructions are available &lt;a href=&quot;https://www.tensorflow.org/install/install_sources&quot;&gt;here&lt;/a&gt;. 
+Using the following command to build the source:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bazel build -c opt --copt&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;-march&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;native --copt&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;-mfpmath&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;both --config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cuda -k //tensorflow/tools/pip_package:build_pip_package
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;I got the following error:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Problem with java installation: couldn't find/access rt.jar in /Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;It happens that &lt;em&gt;rt.jar&lt;/em&gt; is not present in Java 9. To solve it, install a version of Java 8:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew cask install caskroom/versions/java8
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;and then specify the path of Java 8:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;JAVA_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;/usr/libexec/java_home -v 1.8.0_152&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Afterwards, I try to build tensorflow from source again, and it successfully includes the instructions above.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Setting up MySQL / access with python on Mac OS</title>
@@ -303,6 +337,35 @@ Create a file named “.ecmwfapirc” in your home directory and put in the cont
   &lt;li&gt;&lt;a href=&quot;https://software.ecmwf.int/wiki/display/WEBAPI/Access+ECMWF+Public+Datasets#AccessECMWFPublicDatasets-python&quot;&gt;ECMWF python library&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://pypi.python.org/pypi/setuptools&quot;&gt;Python setuptool&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Udemy's course on Web Development</title>
+   <link href="http://localhost:4000/1917/10/01/udemy-web-development-course-notes/"/>
+   <updated>1917-10-01T00:00:00-06:00</updated>
+   <id>http://localhost:4000/1917/10/01/udemy-web-development-course-notes</id>
+   <content type="html">&lt;p&gt;There are a bunch of &lt;a href=&quot;https://www.offers.com/udemy/&quot;&gt;free courses&lt;/a&gt; on Udemy. Here are some notes from the lectures. I’ll keep updating it.&lt;/p&gt;
+
+&lt;h2 id=&quot;free-code-editors-both-downloadable-and-online&quot;&gt;Free code editors (both downloadable and online)&lt;/h2&gt;
+
+&lt;h3 id=&quot;script-editor&quot;&gt;Script editor&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://notepad-plus-plus.org&quot;&gt;Notepad++&lt;/a&gt;
+&lt;a href=&quot;http://lighttable.com/&quot;&gt;Light table&lt;/a&gt;
+&lt;a href=&quot;http://brackets.io&quot;&gt;Brackets&lt;/a&gt;
+&lt;a href=&quot;http://atom.io&quot;&gt;Atom&lt;/a&gt;
+&lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;Sublime&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;html-editor&quot;&gt;HTML editor&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.adobe.com/products/dreamweaver.html&quot;&gt;Dreamweaver&lt;/a&gt;
+&lt;a href=&quot;https://www.activestate.com/komodo-ide&quot;&gt;Komodo&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;online-editor&quot;&gt;Online editor&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://codepen.io&quot;&gt;Codepen.io&lt;/a&gt;
+&lt;a href=&quot;http://jsfiddle.net/&quot;&gt;Javascript - jsfiddle.net&lt;/a&gt;
+&lt;a href=&quot;http://dabblet.com&quot;&gt;CSS editor - dabblet.com&lt;/a&gt;
+&lt;a href=&quot;http://liveweave.com&quot;&gt;Web editor - liveweave.com. Really good functionality.&lt;/a&gt;
+&lt;a href=&quot;http://macaw.co/&quot;&gt;Web design tool - Macaw&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  

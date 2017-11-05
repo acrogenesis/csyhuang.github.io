@@ -23,3 +23,10 @@ It's fun to write about what I have learnt and share solutions to technical prob
 {% for post in site.tags.setup %}
  - [{{ post.title }}]({{ post.url }})
 {% endfor %}
+
+## Notes taken from lectures / online courses:
+
+{% for post in site.tags.coursenotes %}
+ - [{{ post.title }}]({{ post.url }})
+{% endfor %}
+
