@@ -1,3 +1,3 @@
 ### Clare's personal webpage
 
-This is a trial version of webpage building with jekyll :)
+Check out my webpage: [http://csyhuang.github.io](http://csyhuang.github.io).

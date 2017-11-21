@@ -173,6 +173,80 @@ Welcome to my personal homepage! Please use the <b>left-side menu</b> to navigat
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/2017/05/12/switching-to-jekyll/">
+        Switching to Jekyll
+      </a>
+    </h1>
+
+    <span class="post-date">12 May 2017</span>
+
+    <p>I’m switching from a traditional html webpage builder to Jekyll user! Hope to update more often!</p>
+
+<p>I set up Jekyll in my Mac OS X with <a href="http://brew.sh">homebrew</a>,  <a href="https://github.com/rbenv/rbenv">rbenv</a> and <a href="https://rubygems.org/">RubyGems</a>.</p>
+
+<p>To see how to set jekyll up on Windows, refer to my <a href="/2017/02/12/jekyll-on-windows/">older post</a>.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2017/02/12/jekyll-on-windows/">
+        Installation of Jekyll on Windows 10
+      </a>
+    </h1>
+
+    <span class="post-date">12 Feb 2017</span>
+
+    <p>Below are the procedures I used to install Jekyll with problem solvers:</p>
+
+<p>Main reference sites:</p>
+
+<p><a href="https://jekyllrb.com/docs/windows/">Jekyll on Windows</a><br />
+<a href="https://davidburela.wordpress.com/2015/11/28/easily-install-jekyll-on-windows-with-3-command-prompt-entries-and-chocolatey/">Easily install Jekyll on Windows with 3 command prompt entries and Chocolatey</a></p>
+
+<p>Procedures:</p>
+<ol>
+  <li>Open Powershell</li>
+  <li>Run Powershell as administrator: [<a href="http://stackoverflow.com/questions/7690994/powershell-running-a-command-as-administrator">Reference</a>]
+    <blockquote>
+      <p>Start-Process powershell -Verb runAs</p>
+    </blockquote>
+  </li>
+  <li>Change execution policy to enable installation of Chocolatey (a package manager): [<a href="http://stackoverflow.com/questions/4037939/powershell-says-execution-of-scripts-is-disabled-on-this-system">Reference</a>]
+    <blockquote>
+      <p>Set-ExecutionPolicy RemoteSigned</p>
+    </blockquote>
+  </li>
+  <li>Installing Chocolatey: [<a href="https://chocolatey.org/install">Reference</a>]
+    <blockquote>
+      <p>iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex</p>
+    </blockquote>
+  </li>
+  <li>Update the certificate to install ruby: [<a href="http://guides.rubygems.org/ssl-certificate-update/">Reference</a>]<br />
+<a href="http://guides.rubygems.org/ssl-certificate-update/">http://guides.rubygems.org/ssl-certificate-update/</a></li>
+  <li>Install ruby:
+    <blockquote>
+      <p>choco install ruby -y</p>
+    </blockquote>
+  </li>
+  <li>Close the window and open a new command prompt with Administrator access (i.e. step 2)</li>
+  <li>Install gem bundler
+    <blockquote>
+      <p>gem install bundler</p>
+    </blockquote>
+  </li>
+  <li>Install Jekyll
+    <blockquote>
+      <p>gem install jekyll</p>
+    </blockquote>
+  </li>
+  <li>Done :)</li>
+</ol>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/2016/06/13/ECMWF-download/">
         Installing Python Library for downloading ERA-Interim Data
       </a>
