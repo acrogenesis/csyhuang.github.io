@@ -11,5 +11,10 @@ it includes functions to compute the contribution of non-conservative forces to 
 Moreover, the [documentation page](http://hn2016-falwa.readthedocs.io/en/latest/) generated 
 with Sphinx is now hosted on readthedocs.org! Check it out!
 
-
+A side note: somehow I made multiple commits to remedy mistake. The git commands to squash 
+the (3, for example) commits are:
+```
+git rebase -i origin/master~3 master
+git push origin +master
+```
 
