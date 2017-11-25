@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Competitive data science course - Feature preprocessing
+title: Competitive data science - Feature preprocessing
 tags: ['coursenotes']
 ---
 
-Below are the notes taken from the Coursera course about [competitive data science](https://www.coursera.org/learn/competitive-data-science).
+These are notes taken from the Coursera course about [competitive data science](https://www.coursera.org/learn/competitive-data-science).
 
 ## Types of features
 - Ordinal (with an order)
