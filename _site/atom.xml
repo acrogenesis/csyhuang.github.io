@@ -4,13 +4,81 @@
  <title>Shao Ying (Clare) Huang</title>
  <link href="http://lanyon.getpoole.com/atom.xml" rel="self"/>
  <link href="http://lanyon.getpoole.com/"/>
- <updated>2017-11-20T23:56:34-06:00</updated>
+ <updated>2017-11-25T02:02:15-06:00</updated>
  <id>http://lanyon.getpoole.com</id>
  <author>
    <name>Shao Ying (Clare) Huang</name>
    <email>clare1068@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Competitive data science course - Feature preprocessing</title>
+   <link href="http://lanyon.getpoole.com/2017/11/24/coursera-competitive-ds-feature-preprocessing/"/>
+   <updated>2017-11-24T00:00:00-06:00</updated>
+   <id>http://lanyon.getpoole.com/2017/11/24/coursera-competitive-ds-feature-preprocessing</id>
+   <content type="html">&lt;p&gt;Below are the notes taken from the Coursera course about &lt;a href=&quot;https://www.coursera.org/learn/competitive-data-science&quot;&gt;competitive data science&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;types-of-features&quot;&gt;Types of features&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ordinal (with an order)&lt;/li&gt;
+  &lt;li&gt;Categorical&lt;/li&gt;
+  &lt;li&gt;ID (unique for each entity)&lt;/li&gt;
+  &lt;li&gt;Numeric&lt;/li&gt;
+  &lt;li&gt;Text&lt;/li&gt;
+  &lt;li&gt;Datetime and coordinates&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;numerical-variables&quot;&gt;Numerical variables&lt;/h2&gt;
+&lt;h3 id=&quot;preprocessing-non-tree-based-model&quot;&gt;Preprocessing: Non tree-based model&lt;/h3&gt;
+&lt;p&gt;Linear models, SVM, kNN and NN have their performance dependent on scaling of features. 
+In general, when training a non-tree-based model, using preprocessing to scale all the 
+features to one scale make their initial impact roughly similar.
+Different types of scaling includes:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Scale to [0,1], e.g. sklearn.preprocessing.MinMaxScaler&lt;/li&gt;
+  &lt;li&gt;Scale to mean = 0, std = 1, e.g. sklearn.preprocessing.StandardScaler&lt;/li&gt;
+  &lt;li&gt;Log-transform: np.log(1+x)&lt;/li&gt;
+  &lt;li&gt;Raising to the power &amp;lt; 1: np.sqrt(x+2/3)&lt;/li&gt;
+  &lt;li&gt;Rank transformation: setting spaces between proper assorted values to be equal.
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;rank&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1e+5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;rank&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;or&lt;/p&gt;
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;scipy.stats&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rankdata&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Treatment of outliers: clip features values between two chosen values of lower bound 
+and upper bound, e.g. 1st and 99th percentiles. This procedure of clipping is well-known 
+in financial data and it is called &lt;a href=&quot;https://en.wikipedia.org/wiki/Winsorizing&quot;&gt;winsorization&lt;/a&gt;. 
+In python, it can be done as follows:
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;upperbound&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lowerbound&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;percentile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;99&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;upperbound&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lowerbound&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;h3 id=&quot;preprocessing-tree-based-model&quot;&gt;Preprocessing: Tree-based model&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Independent of scaling&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;feature-generation&quot;&gt;Feature generation&lt;/h3&gt;
+&lt;p&gt;Generate features easier to handle by models using prior knowledge/insights from EDA. In general,
+regardless of whether a model is tree-based, handling multiplication/division is difficult.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Housing price: given area and price, compute price per square-meter&lt;/li&gt;
+  &lt;li&gt;Knowing vertical and horizontal distance from water source, derive direct distance&lt;/li&gt;
+  &lt;li&gt;Price of products: using &lt;em&gt;fractional part&lt;/em&gt; (e.g. 0.99 in 2.99) as a feature 
+(psychological effect!)&lt;/li&gt;
+  &lt;li&gt;Price in an auction: to distinguish whether it is a human (15M) or a robot (9.35245233M)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/discover-feature-engineering-how-to-engineer-features-and-how-to-get-good-at-it/&quot;&gt;Useful article on feature engineering&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;(To be continued, stopped at week 1 - numerical features)&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>My python library updated to v0.2.0!</title>

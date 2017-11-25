@@ -1,4 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://lanyon.getpoole.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://lanyon.getpoole.com/" rel="alternate" type="text/html" /><updated>2017-11-20T23:56:34-06:00</updated><id>http://lanyon.getpoole.com/</id><title type="html">Shao Ying (Clare) Huang</title><subtitle>PhD in Geophysical Sciences in UChicago. Love coding, music and writing.</subtitle><author><name>Shao Ying (Clare) Huang</name><email>clare1068@gmail.com</email></author><entry><title type="html">My python library updated to v0.2.0!</title><link href="http://lanyon.getpoole.com/2017/11/20/significant-update-to-v0-2-0/" rel="alternate" type="text/html" title="My python library updated to v0.2.0!" /><published>2017-11-20T00:00:00-06:00</published><updated>2017-11-20T00:00:00-06:00</updated><id>http://lanyon.getpoole.com/2017/11/20/significant-update-to-v0-2-0</id><content type="html" xml:base="http://lanyon.getpoole.com/2017/11/20/significant-update-to-v0-2-0/">&lt;p&gt;I have updated my python library &lt;a href=&quot;http://github.com/csyhuang/hn2016_falwa&quot;&gt;hn2016_falwa&lt;/a&gt; to 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://lanyon.getpoole.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://lanyon.getpoole.com/" rel="alternate" type="text/html" /><updated>2017-11-25T02:02:15-06:00</updated><id>http://lanyon.getpoole.com/</id><title type="html">Shao Ying (Clare) Huang</title><subtitle>PhD in Geophysical Sciences in UChicago. Love coding, music and writing.</subtitle><author><name>Shao Ying (Clare) Huang</name><email>clare1068@gmail.com</email></author><entry><title type="html">Competitive data science course - Feature preprocessing</title><link href="http://lanyon.getpoole.com/2017/11/24/coursera-competitive-ds-feature-preprocessing/" rel="alternate" type="text/html" title="Competitive data science course - Feature preprocessing" /><published>2017-11-24T00:00:00-06:00</published><updated>2017-11-24T00:00:00-06:00</updated><id>http://lanyon.getpoole.com/2017/11/24/coursera-competitive-ds-feature-preprocessing</id><content type="html" xml:base="http://lanyon.getpoole.com/2017/11/24/coursera-competitive-ds-feature-preprocessing/">&lt;p&gt;Below are the notes taken from the Coursera course about &lt;a href=&quot;https://www.coursera.org/learn/competitive-data-science&quot;&gt;competitive data science&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;types-of-features&quot;&gt;Types of features&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ordinal (with an order)&lt;/li&gt;
+  &lt;li&gt;Categorical&lt;/li&gt;
+  &lt;li&gt;ID (unique for each entity)&lt;/li&gt;
+  &lt;li&gt;Numeric&lt;/li&gt;
+  &lt;li&gt;Text&lt;/li&gt;
+  &lt;li&gt;Datetime and coordinates&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;numerical-variables&quot;&gt;Numerical variables&lt;/h2&gt;
+&lt;h3 id=&quot;preprocessing-non-tree-based-model&quot;&gt;Preprocessing: Non tree-based model&lt;/h3&gt;
+&lt;p&gt;Linear models, SVM, kNN and NN have their performance dependent on scaling of features. 
+In general, when training a non-tree-based model, using preprocessing to scale all the 
+features to one scale make their initial impact roughly similar.
+Different types of scaling includes:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Scale to [0,1], e.g. sklearn.preprocessing.MinMaxScaler&lt;/li&gt;
+  &lt;li&gt;Scale to mean = 0, std = 1, e.g. sklearn.preprocessing.StandardScaler&lt;/li&gt;
+  &lt;li&gt;Log-transform: np.log(1+x)&lt;/li&gt;
+  &lt;li&gt;Raising to the power &amp;lt; 1: np.sqrt(x+2/3)&lt;/li&gt;
+  &lt;li&gt;Rank transformation: setting spaces between proper assorted values to be equal.
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;rank&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1e+5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;rank&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;or&lt;/p&gt;
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;scipy.stats&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rankdata&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Treatment of outliers: clip features values between two chosen values of lower bound 
+and upper bound, e.g. 1st and 99th percentiles. This procedure of clipping is well-known 
+in financial data and it is called &lt;a href=&quot;https://en.wikipedia.org/wiki/Winsorizing&quot;&gt;winsorization&lt;/a&gt;. 
+In python, it can be done as follows:
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;upperbound&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lowerbound&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;percentile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;99&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;upperbound&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lowerbound&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;h3 id=&quot;preprocessing-tree-based-model&quot;&gt;Preprocessing: Tree-based model&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Independent of scaling&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;feature-generation&quot;&gt;Feature generation&lt;/h3&gt;
+&lt;p&gt;Generate features easier to handle by models using prior knowledge/insights from EDA. In general,
+regardless of whether a model is tree-based, handling multiplication/division is difficult.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Housing price: given area and price, compute price per square-meter&lt;/li&gt;
+  &lt;li&gt;Knowing vertical and horizontal distance from water source, derive direct distance&lt;/li&gt;
+  &lt;li&gt;Price of products: using &lt;em&gt;fractional part&lt;/em&gt; (e.g. 0.99 in 2.99) as a feature 
+(psychological effect!)&lt;/li&gt;
+  &lt;li&gt;Price in an auction: to distinguish whether it is a human (15M) or a robot (9.35245233M)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/discover-feature-engineering-how-to-engineer-features-and-how-to-get-good-at-it/&quot;&gt;Useful article on feature engineering&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;(To be continued, stopped at week 1 - numerical features)&lt;/p&gt;</content><author><name>Shao Ying (Clare) Huang</name><email>clare1068@gmail.com</email></author><category term="coursenotes" /><summary type="html">Below are the notes taken from the Coursera course about competitive data science.</summary></entry><entry><title type="html">My python library updated to v0.2.0!</title><link href="http://lanyon.getpoole.com/2017/11/20/significant-update-to-v0-2-0/" rel="alternate" type="text/html" title="My python library updated to v0.2.0!" /><published>2017-11-20T00:00:00-06:00</published><updated>2017-11-20T00:00:00-06:00</updated><id>http://lanyon.getpoole.com/2017/11/20/significant-update-to-v0-2-0</id><content type="html" xml:base="http://lanyon.getpoole.com/2017/11/20/significant-update-to-v0-2-0/">&lt;p&gt;I have updated my python library &lt;a href=&quot;http://github.com/csyhuang/hn2016_falwa&quot;&gt;hn2016_falwa&lt;/a&gt; to 
 v0.2.0 (see &lt;a href=&quot;https://github.com/csyhuang/hn2016_falwa/releases/tag/v0.2.0&quot;&gt;release note&lt;/a&gt;! Now 
 it includes functions to compute the contribution of non-conservative forces to wave activity.&lt;/p&gt;
 
@@ -119,24 +178,4 @@ only MySQL is freely supported there (while I’ve been using PostgreSQL). So, a
   &lt;li&gt;Data sets for training a sentiment classifier: &lt;a href=&quot;https://www.cs.cornell.edu/people/pabo/movie-review-data/&quot;&gt;Movie Review Data&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;(More to be updated)&lt;/p&gt;</content><author><name>Shao Ying (Clare) Huang</name><email>clare1068@gmail.com</email></author><category term="ds" /><summary type="html">On top of utilities in nltk.sentiment, there are also some packages for training and combining classifiers:</summary></entry><entry><title type="html">Published a paper on Local Wave Activity Budget!</title><link href="http://lanyon.getpoole.com/2017/05/15/LWA-budget-paper-published/" rel="alternate" type="text/html" title="Published a paper on Local Wave Activity Budget!" /><published>2017-05-15T00:00:00-05:00</published><updated>2017-05-15T00:00:00-05:00</updated><id>http://lanyon.getpoole.com/2017/05/15/LWA-budget-paper-published</id><content type="html" xml:base="http://lanyon.getpoole.com/2017/05/15/LWA-budget-paper-published/">&lt;p&gt;I’ve published a &lt;a href=&quot;http://onlinelibrary.wiley.com/doi/10.1002/2017GL073760/abstract;jsessionid=2EEA61FFE129914E672C6F10497975B2.f02t02&quot;&gt;new paper&lt;/a&gt; on Geophysical Research Letters!&lt;/p&gt;
-
-&lt;p&gt;Climate dynamicists have derived a conservation relation based on &lt;em&gt;small-amplitude wave assumption&lt;/em&gt; for wave activity (&lt;em&gt;A&lt;/em&gt;) that describes evolution of Rossby wave packets:&lt;br /&gt;
-&lt;img src=&quot;/assets/img/simple-wave-activity-equation.png&quot; alt=&quot;Wave activity flux equation&quot; style=&quot;width: 250px;&quot; /&gt;&lt;br /&gt;
-However, only the wave activity flux vector on the RHS has been used to diagnose realistic climate data. &lt;em&gt;A&lt;/em&gt; is ill-defined when wave amplitude is large (i.e. ‘of finite-amplitude’).  In &lt;a href=&quot;http://journals.ametsoc.org/doi/abs/10.1175/JAS-D-15-0194.1&quot;&gt;Huang &amp;amp; Nakamura (2016)&lt;/a&gt;, we introduced a new theory of wave activity applicable to large waves. We thus can obtain a well-defined &lt;em&gt;A&lt;/em&gt; even from real data. This is the &lt;strong&gt;first piece of work that compare LHS and RHS of the conservative part of equation above for reanalysis data&lt;/strong&gt;. This advance allows us to estimate the overall non-conservative contribution (natural/human-induced forcings) to the observed flow.&lt;/p&gt;
-
-&lt;p&gt;Major results include:&lt;/p&gt;
-
-&lt;p&gt;(1) Our estimation of transient wave activity (top panel) is consistent with &lt;a href=&quot;http://journals.ametsoc.org/doi/abs/10.1175/1520-0469%281986%29043%3C1657%3ATDPOTQ%3E2.0.CO%3B2&quot;&gt;previous work&lt;/a&gt; (bottom panel, assuming small-amplitude waves) and is better behaving.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/Revise_fig2.png&quot; alt=&quot;Comparison with previous work&quot; style=&quot;width: \textwidth;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;(2) We can break down the local wave activity budget at seasonal time-scale.&lt;/p&gt;
-&lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/img/Revise_fig3.png&quot; alt=&quot;Wave activity flux equation&quot; style=&quot;width: \textwidth;&quot; /&gt;  
-&lt;/p&gt;
-
-&lt;p&gt;(3) We can also break down the budget in synoptic time-scale with the use of co-spectral analysis.&lt;/p&gt;
-&lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/img/Revise_fig4.png&quot; alt=&quot;Wave activity flux equation&quot; style=&quot;width: \textwidth;&quot; /&gt;
-&lt;/p&gt;</content><author><name>Shao Ying (Clare) Huang</name><email>clare1068@gmail.com</email></author><category term="research" /><summary type="html">I’ve published a new paper on Geophysical Research Letters! Climate dynamicists have derived a conservation relation based on small-amplitude wave assumption for wave activity (A) that describes evolution of Rossby wave packets: However, only the wave activity flux vector on the RHS has been used to diagnose realistic climate data. A is ill-defined when wave amplitude is large (i.e. ‘of finite-amplitude’). In Huang &amp;amp; Nakamura (2016), we introduced a new theory of wave activity applicable to large waves. We thus can obtain a well-defined A even from real data. This is the first piece of work that compare LHS and RHS of the conservative part of equation above for reanalysis data. This advance allows us to estimate the overall non-conservative contribution (natural/human-induced forcings) to the observed flow. Major results include: (1) Our estimation of transient wave activity (top panel) is consistent with previous work (bottom panel, assuming small-amplitude waves) and is better behaving. (2) We can break down the local wave activity budget at seasonal time-scale. (3) We can also break down the budget in synoptic time-scale with the use of co-spectral analysis.</summary></entry></feed>
+&lt;p&gt;(More to be updated)&lt;/p&gt;</content><author><name>Shao Ying (Clare) Huang</name><email>clare1068@gmail.com</email></author><category term="ds" /><summary type="html">On top of utilities in nltk.sentiment, there are also some packages for training and combining classifiers:</summary></entry></feed>
