@@ -10,9 +10,7 @@ My name is Clare, Shao Ying Huang. ("Shao Ying" is my legal first name, while "C
 
 Prior to attending graduate school, I spent my first 21 years of life in Hong Kong. I did my B. Sc. degree in Physics at the Chinese University of Hong Kong with double-minor in Mathematics and German Languages.
 
-In my spare time, I like writing and making music. I have a [youtube channel](https://www.youtube.com/user/phyclare) with my vocal performances and improvised piano covers (of mostly Cantonese songs).
-
-Read my <a href="http://home.uchicago.edu/~csyhuang/CSYHuang_CV.pdf" target="_blank">academic CV</a>.
+Read my <a href="https://www.dropbox.com/s/5o8zl59bbt7rq26/CSYHuang_CV.docx?dl=0" target="_blank">academic CV</a>.
 
 ## Contact Info
 - Email: csyhuang (at) uchicago (dot) edu
@@ -21,3 +19,6 @@ Read my <a href="http://home.uchicago.edu/~csyhuang/CSYHuang_CV.pdf" target="_bl
 - [ResearchGate](http://www.researchgate.net/profile/Clare_Huang)
 - [LinkedIn](https://www.linkedin.com/in/shao-ying-clare-huang/)
 - [Twitter](http://twitter.com/ClareSYHuang)
+
+## Others
+In my spare time, I like writing and making music. I have a [youtube channel](https://www.youtube.com/user/phyclare) with my vocal performances and improvised piano covers.

@@ -4,9 +4,16 @@ title: Publications
 permalink: /publications/
 ---
 
+## Submitted manuscripts
 
-## Accepted / Published
+Lubis, S.W, **Clare S.Y. Huang**, and Noboru Nakamura: Role of Finite-Amplitude Wave Activity and Mixing in Eddy Forcing during Sudden Stratospheric Warming, submitted to *GRL*.
 
+Nakamura, N., **Clare S.Y. Huang**: Atmospheric blocking as a traffic jam in the jet stream, submitted.
+
+Lubis, S.W, **Clare S.Y. Huang**, Noboru Nakamura, Nour-Eddine Omrani, Martin Jucker: Role of Finite-Amplitude Rossby Waves and Nonconservative Processes in the Downward Migration of Extratropical Flow Anomalies, submitted to *JAS*.
+
+
+## Accepted/Published articles
 
 **Huang, C. S. Y.**, & Nakamura, N. **[Local wave activity budgets of the Pacific and Atlantic storm tracks in the northern winter.](http://onlinelibrary.wiley.com/doi/10.1002/2017GL073760/abstract;jsessionid=2EEA61FFE129914E672C6F10497975B2.f02t02)** [[Supporting Materials](http://onlinelibrary.wiley.com/store/10.1002/2017GL073760/asset/supinfo/2017GL073760-sup-0001-Text%2520SI-S01_AA.pdf?v=1&s=885968fc7fbd2de7010aff1a69123fd488429d7f)]
 
