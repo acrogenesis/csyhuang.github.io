@@ -4,7 +4,7 @@ title: Three co-authored papers submitted
 ---
 
 The [publication page]({{ site.baseurl }}{% link publications.md %}) 
-has been updated with 3 submitted manuscripts. 
+has been updated with 3 submitted manuscripts.
 
 The subroutine 
 `wrapper.qgpv_eqlat_lwa_ncforce` for computing effective diffusivity, which quantifies the 

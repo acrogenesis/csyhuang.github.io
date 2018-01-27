@@ -144,9 +144,12 @@
   </p>
   <p class="influidcontainer">
   I also participated in the <a href="http://insightdatascience.com">Insight Data Science Fellowship Program</a> in 2017 summer as a Health Data Fellow to learn about data science and health industry.
-  I worked on a consulting project for an online birth control pill selling platform on churn prediction.
-  You can find my mini-data-projects and <a href="/technical">technical learning journals</a> here.
+  I worked on a consulting project for an online birth control pill selling platform on churn prediction (<a href="http://www.churnpredictor.site/" target="blank">demo webapp</a>).
   </p>
+  <p>
+  I love to share what I've learnt with others. Check out my blog posts and <a href="/technical">technical learning journals</a> for technical solutions I've found and things I learnt in MOOC courses.
+  </p>  
+  <!-- You can find my mini-data-projects and <a href="/technical">technical learning journals</a> here. -->
 
 <!-- 
   Welcome to my personal homepage! 
@@ -174,6 +177,65 @@ Welcome to my personal homepage! Please use the <b>left-side menu</b> to navigat
 <hr>
 
 <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2017/09/09/install-mysql/">
+        Setting up MySQL / access with python on Mac OS
+      </a>
+    </h1>
+
+    <span class="post-date">09 Sep 2017</span>
+
+    <p>Today I wanted to setup an automated kickstarter scraper on <a href="http://pythonanywhere.com">Python Anywhere</a> but realized that 
+only MySQL is freely supported there (while I’ve been using PostgreSQL). So, a time to switch?</p>
+
+<p>Here is how I install MySQL on my Mac and have it accessed with <em>SQLAlchemy</em>:</p>
+
+<ol>
+  <li>Download and install <a href="https://dev.mysql.com/doc/refman/5.6/en/osx-installation-pkg.html">MySQL from Oracle</a>.</li>
+  <li>Go to <em>System Preferences</em> to start the MySQL server.</li>
+  <li>Navigate to the bin directory and login with the temporary password shown at the end of the installation:
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd</span> /usr/local/mysql/bin
+./mysql -u root -p
+</code></pre>
+    </div>
+  </li>
+  <li>Create another set of <em>username</em> and <em>password</em> that you use instead of <em>root</em>.
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>CREATE USER username@localhost IDENTIFIED BY <span class="s1">'password'</span>
+</code></pre>
+    </div>
+  </li>
+  <li>I have installed <em>pymysql</em> and <em>sqlalchemy</em> in Python to access the MySQL database. To access the database:</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy_utils</span> <span class="kn">import</span> <span class="n">database_exists</span><span class="p">,</span> <span class="n">create_database</span>
+
+<span class="c"># dbname is the database name</span>
+<span class="c"># user_id and user_password are what you put in above</span>
+
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s">"mysql+pymysql://</span><span class="si">%</span><span class="s">s:</span><span class="si">%</span><span class="s">s@localhost:3306/</span><span class="si">%</span><span class="s">s"</span>
+                       <span class="o">%</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="n">user_password</span><span class="p">,</span><span class="n">dbname</span><span class="p">),</span><span class="n">echo</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">database_exists</span><span class="p">(</span><span class="n">engine</span><span class="o">.</span><span class="n">url</span><span class="p">):</span> 
+    <span class="n">create_database</span><span class="p">(</span><span class="n">engine</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>			<span class="c"># Create database if it doesn't exist.</span>
+    
+<span class="n">con</span> <span class="o">=</span> <span class="n">engine</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span> <span class="c"># Connect to the MySQL engine</span>
+<span class="n">table_name</span> <span class="o">=</span> <span class="s">'new_table'</span>
+<span class="n">command</span> <span class="o">=</span> <span class="s">"DROP TABLE IF EXISTS new_table;"</span> <span class="c"># Drop if such table exist</span>
+<span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Executing SQL commands is rather easy by using:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Enjoy! :)</p>
+
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -251,27 +313,6 @@ Welcome to my personal homepage! Please use the <b>left-side menu</b> to navigat
     <span class="post-date">11 Jun 2017</span>
 
     <p><a href="(https://stackoverflow.com/questions/32389599/anaconda-importerror-libsm-so-6-cannot-open-shared-object-file-no-such-file-o)">Solution</a> for the error <em>libSM.so.6: cannot open shared object file</em>.</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2017/06/10/Python-packages-for-Sentiment-Analysis/">
-        Python packages for Sentiment Analysis
-      </a>
-    </h1>
-
-    <span class="post-date">10 Jun 2017</span>
-
-    <p>On top of utilities in <em>nltk.sentiment</em>, there are also some packages for training and combining classifiers:</p>
-
-<ul>
-  <li><a href="https://github.com/japerk/nltk-trainer">NLTK-trainer</a> by <a href="https://www.linkedin.com/in/jacobperkins">Jacob Perkins</a>, accompanied by the <a href="https://github.com/japerk/nltk3-cookbook">NLTK-cookbook</a> he wrote.</li>
-  <li><a href="https://github.com/clips/pattern">Pattern.en</a> developed by the <a href="http://www.clips.ua.ac.be/">Computational Linguistics Research Group</a></li>
-  <li>Data sets for training a sentiment classifier: <a href="https://www.cs.cornell.edu/people/pabo/movie-review-data/">Movie Review Data</a></li>
-</ul>
-
-<p>(More to be updated)</p>
 
   </div>
   

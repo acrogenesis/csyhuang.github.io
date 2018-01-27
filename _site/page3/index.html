@@ -144,9 +144,12 @@
   </p>
   <p class="influidcontainer">
   I also participated in the <a href="http://insightdatascience.com">Insight Data Science Fellowship Program</a> in 2017 summer as a Health Data Fellow to learn about data science and health industry.
-  I worked on a consulting project for an online birth control pill selling platform on churn prediction.
-  You can find my mini-data-projects and <a href="/technical">technical learning journals</a> here.
+  I worked on a consulting project for an online birth control pill selling platform on churn prediction (<a href="http://www.churnpredictor.site/" target="blank">demo webapp</a>).
   </p>
+  <p>
+  I love to share what I've learnt with others. Check out my blog posts and <a href="/technical">technical learning journals</a> for technical solutions I've found and things I learnt in MOOC courses.
+  </p>  
+  <!-- You can find my mini-data-projects and <a href="/technical">technical learning journals</a> here. -->
 
 <!-- 
   Welcome to my personal homepage! 
@@ -174,6 +177,27 @@ Welcome to my personal homepage! Please use the <b>left-side menu</b> to navigat
 <hr>
 
 <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2017/06/10/Python-packages-for-Sentiment-Analysis/">
+        Python packages for Sentiment Analysis
+      </a>
+    </h1>
+
+    <span class="post-date">10 Jun 2017</span>
+
+    <p>On top of utilities in <em>nltk.sentiment</em>, there are also some packages for training and combining classifiers:</p>
+
+<ul>
+  <li><a href="https://github.com/japerk/nltk-trainer">NLTK-trainer</a> by <a href="https://www.linkedin.com/in/jacobperkins">Jacob Perkins</a>, accompanied by the <a href="https://github.com/japerk/nltk3-cookbook">NLTK-cookbook</a> he wrote.</li>
+  <li><a href="https://github.com/clips/pattern">Pattern.en</a> developed by the <a href="http://www.clips.ua.ac.be/">Computational Linguistics Research Group</a></li>
+  <li>Data sets for training a sentiment classifier: <a href="https://www.cs.cornell.edu/people/pabo/movie-review-data/">Movie Review Data</a></li>
+</ul>
+
+<p>(More to be updated)</p>
+
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -347,78 +371,6 @@ Create a file named “.ecmwfapirc” in your home directory and put in the cont
   <li><a href="https://software.ecmwf.int/wiki/display/WEBAPI/Access+ECMWF+Public+Datasets#AccessECMWFPublicDatasets-python">ECMWF python library</a></li>
   <li><a href="https://pypi.python.org/pypi/setuptools">Python setuptool</a></li>
 </ul>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/1917/11/24/notes-on-competitive-ds-feature-preprocessing/">
-        Competitive data science - Feature preprocessing
-      </a>
-    </h1>
-
-    <span class="post-date">24 Nov 1917</span>
-
-    <p>These are notes taken from the Coursera course about <a href="https://www.coursera.org/learn/competitive-data-science">competitive data science</a>.</p>
-
-<h2 id="types-of-features">Types of features</h2>
-<ul>
-  <li>Ordinal (with an order)</li>
-  <li>Categorical</li>
-  <li>ID (unique for each entity)</li>
-  <li>Numeric</li>
-  <li>Text</li>
-  <li>Datetime and coordinates</li>
-</ul>
-
-<h2 id="numerical-variables">Numerical variables</h2>
-<h3 id="preprocessing-non-tree-based-model">Preprocessing: Non tree-based model</h3>
-<p>Linear models, SVM, kNN and NN have their performance dependent on scaling of features. 
-In general, when training a non-tree-based model, using preprocessing to scale all the 
-features to one scale make their initial impact roughly similar.
-Different types of scaling includes:</p>
-<ul>
-  <li>Scale to [0,1], e.g. sklearn.preprocessing.MinMaxScaler</li>
-  <li>Scale to mean = 0, std = 1, e.g. sklearn.preprocessing.StandardScaler</li>
-  <li>Log-transform: np.log(1+x)</li>
-  <li>Raising to the power &lt; 1: np.sqrt(x+2/3)</li>
-  <li>Rank transformation: setting spaces between proper assorted values to be equal.
-    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">rank</span><span class="p">([</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">1e+5</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">rank</span><span class="p">([</span><span class="mi">1000</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-</code></pre>
-    </div>
-    <p>or</p>
-    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">rankdata</span>
-</code></pre>
-    </div>
-  </li>
-  <li>Treatment of outliers: clip features values between two chosen values of lower bound 
-and upper bound, e.g. 1st and 99th percentiles. This procedure of clipping is well-known 
-in financial data and it is called <a href="https://en.wikipedia.org/wiki/Winsorizing">winsorization</a>. 
-In python, it can be done as follows:
-    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">upperbound</span><span class="p">,</span> <span class="n">lowerbound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">x</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">99</span><span class="p">])</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">upperbound</span><span class="p">,</span> <span class="n">lowerbound</span><span class="p">)</span>
-</code></pre>
-    </div>
-    <h3 id="preprocessing-tree-based-model">Preprocessing: Tree-based model</h3>
-  </li>
-  <li>Independent of scaling</li>
-</ul>
-
-<h3 id="feature-generation">Feature generation</h3>
-<p>Generate features easier to handle by models using prior knowledge/insights from EDA. In general,
-regardless of whether a model is tree-based, handling multiplication/division is difficult.</p>
-<ul>
-  <li>Housing price: given area and price, compute price per square-meter</li>
-  <li>Knowing vertical and horizontal distance from water source, derive direct distance</li>
-  <li>Price of products: using <em>fractional part</em> (e.g. 0.99 in 2.99) as a feature 
-(psychological effect!)</li>
-  <li>Price in an auction: to distinguish whether it is a human (15M) or a robot (9.35245233M)</li>
-</ul>
-
-<p><a href="https://machinelearningmastery.com/discover-feature-engineering-how-to-engineer-features-and-how-to-get-good-at-it/">Useful article on feature engineering</a></p>
-
-<p>(To be continued, stopped at week 1 - numerical features)</p>
 
   </div>
   
