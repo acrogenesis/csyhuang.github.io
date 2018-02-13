@@ -8,18 +8,19 @@ permalink: /publications/
 
 Lubis, S.W, **Clare S.Y. Huang**, and Noboru Nakamura: Role of Finite-Amplitude Wave Activity and Mixing in Eddy Forcing during Sudden Stratospheric Warming, submitted to *GRL*.
 
-Nakamura, N., **Clare S.Y. Huang**: Atmospheric blocking as a traffic jam in the jet stream, submitted.
-
-Lubis, S.W, **Clare S.Y. Huang**, Noboru Nakamura, Nour-Eddine Omrani, Martin Jucker: Role of Finite-Amplitude Rossby Waves and Nonconservative Processes in the Downward Migration of Extratropical Flow Anomalies, submitted to *JAS*.
-
+Nakamura, N., **Clare S.Y. Huang**: Atmospheric blocking as a traffic jam in the jet stream, submitted to *Science* (under review).
 
 ## Accepted/Published articles
+
+
+Lubis, S.W, **Huang, C. S. Y.**, Noboru Nakamura, Nour-Eddine Omrani, Martin Jucker: Role of Finite-Amplitude Rossby Waves and Nonconservative Processes in the Downward Migration of Extratropical Flow Anomalies. *Journal of the Atmospheric Sciences* (accepted).  
+
 
 **Huang, C. S. Y.**, & Nakamura, N. **[Local wave activity budgets of the Pacific and Atlantic storm tracks in the northern winter.](http://onlinelibrary.wiley.com/doi/10.1002/2017GL073760/abstract;jsessionid=2EEA61FFE129914E672C6F10497975B2.f02t02)** [[Supporting Materials](http://onlinelibrary.wiley.com/store/10.1002/2017GL073760/asset/supinfo/2017GL073760-sup-0001-Text%2520SI-S01_AA.pdf?v=1&s=885968fc7fbd2de7010aff1a69123fd488429d7f)]
 
 Read [this post](/2017/05/15/LWA-budget-paper-published/) for a brief summary of my results.
 
-Nakamura, N., & **Huang, C. S. Y.** (2017). **[Local wave activity and the onset of blocking along a potential vorticity front.](http://journals.ametsoc.org/doi/abs/10.1175/JAS-D-17-0029.1)** *Journal of the Atmospheric Sciences*, (2017).
+Nakamura, N., & **Huang, C. S. Y.** (2017). **[Local wave activity and the onset of blocking along a potential vorticity front.](http://journals.ametsoc.org/doi/abs/10.1175/JAS-D-17-0029.1)** *Journal of the Atmospheric Sciences*.
 
 - A quasilinear 1D theory based on the conservation of local wave activity predicts that no steady wavetrain can be maintained where the westerly zonal flow is decelerated below one half of the initial value.
 - Fully nonlinear, high-resolution 2D calculations show that the wavetrain indeed undergoes a significant transformation once the zonal flow along the jet axis is decelerated below the threshold.

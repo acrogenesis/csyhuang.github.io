@@ -12,3 +12,4 @@ discuss about transfer learning & The art of using pre-trained models in deep le
 - [Hands-On Machine Learning with Scikit-Learn and TensorFlow](http://shop.oreilly.com/product/0636920052289.do) has discussion on deep learning from Ch.10 onward.
 - Kaggle forum has a beginner tutorial of [using RNN to classify toxic comments](https://www.kaggle.com/sbongo/for-beginners-tackling-toxic-using-keras/notebook) on wikipedia editing page.  
 (To be updated.)
+

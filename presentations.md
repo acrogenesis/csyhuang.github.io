@@ -6,6 +6,9 @@ permalink: /presentations/
 
 Click on the presentation title for the PDF file/recording of my poster/slides.
 
+* **[Budgets of finite-amplitude Local Wave Activity in Northern Winter](https://www.dropbox.com/s/0ocvvwfb44e551b/AMS2017_poster_final.pdf?dl=1)**  
+Poster presentation at [AMS 21th AOFD Meeting 2017](https://ams.confex.com/ams/21Fluid19Middle/webprogram/21FLUID.html), Portland, OR. (Jun 2017, substitute presenter: Dr. Sandro Lubis)  
+
 * **[Trends and Climatologies of Northern Hemispheric Local Wave Activity and Fluxes in a Warming Climate (Dec 2016)](https://agu.confex.com/data/handout/agu/fm16/Paper_197912_handout_9528_0.pdf)**  
 Poster presentation at [AGU 2016 Fall Meeting](http://fallmeeting.agu.org/2016/), San Francisco, CA.
 
